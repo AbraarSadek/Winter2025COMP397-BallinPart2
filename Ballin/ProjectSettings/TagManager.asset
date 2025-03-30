@@ -7,6 +7,8 @@ TagManager:
   - whatIsGoldCoin
   - whatIsSilverCoin
   - whatIsBronzeCoin
+  - CinemachineTarget
+  - Audio
   layers:
   - Default
   - TransparentFX
