@@ -25,10 +25,9 @@ namespace cameraManager {
         //Awake Method - Called when the script is loaded
         private void Awake() {
 
-            #if UNITY_EDITOR && !UNITY_ANDROID
+            //Lock The Mouse Cursor To The Game View And Hide It
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-            #endif
 
             //If-Statement - That Will Check If The Player Transform Is Already Assigned, And If Not, Assign It
             if (player == null) {
