@@ -26,9 +26,11 @@ namespace cameraManager {
         private void Awake() {
 
             //Lock The Mouse Cursor To The Game View And Hide It
+            #if !UNITY_ANDROID
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
-
+            #endif
+            
             //If-Statement - That Will Check If The Player Transform Is Already Assigned, And If Not, Assign It
             if (player == null) {
                 GameObject foundPlayer = GameObject.FindGameObjectWithTag("Player");
