@@ -136,7 +136,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1764727
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4053,6 +4053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b997d673713b6b4e8227e90c07db5ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coinsCollected: 0
   score: {fileID: 11400000, guid: f407bbb50a6f1244baaf98fe43b0c1af, type: 2}
   star: {fileID: 11400000, guid: 74e45948d3a523548b635481b6d439df, type: 2}
   hasCollectedGoldCoin: 0
@@ -4393,6 +4394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f29418055ccec8543809ac0a540c401b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerHealthController: {fileID: 1307947367}
+  coinCollectionController: {fileID: 1307947368}
+  timerController: {fileID: 285235877}
 --- !u!1 &1342321607
 GameObject:
   m_ObjectHideFlags: 0
