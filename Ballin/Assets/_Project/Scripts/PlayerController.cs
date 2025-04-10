@@ -13,6 +13,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour {
 
@@ -26,6 +27,10 @@ public class PlayerController : MonoBehaviour {
     public float walkSpeed = 6.0f;
     [Range(0.0f, 0.5f)] public float moveSmoothTime = 0.03f;
     public float gravity = -30f;
+    InputAction moveAction;
+    InputAction lookAction;
+    //todo: InputAction jumpAction;
+    
 
     //Ground Check Variables
     [Header("Player Ground Check Settings: ")]
@@ -59,7 +64,8 @@ public class PlayerController : MonoBehaviour {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        moveAction = InputSystem.actions.FindAction("Move");
+        lookAction = InputSystem.actions.FindAction("Look");
         controller = GetComponent<CharacterController>();
 
         if (isCursorLocked) {
@@ -79,7 +85,7 @@ public class PlayerController : MonoBehaviour {
     public void UpdateMouse()
     {
 
-        UnityEngine.Vector2 targetMouseDelta = new UnityEngine.Vector2(Input.GetAxis("Mouse X"), Input.GetAxis("Mouse Y"));
+        UnityEngine.Vector2 targetMouseDelta = lookAction.ReadValue<UnityEngine.Vector2>();
 
         currentMouseDelta = UnityEngine.Vector2.SmoothDamp(currentMouseDelta, targetMouseDelta, ref currentMouseDeltaVelocity, mouseSmoothTime);
 
@@ -97,7 +103,7 @@ public class PlayerController : MonoBehaviour {
 
         isGrounded = Physics.CheckSphere(groundCheck.position, 0.2f, ground);
 
-        UnityEngine.Vector2 targetDirection = new UnityEngine.Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        UnityEngine.Vector2 targetDirection = moveAction.ReadValue<UnityEngine.Vector2>();
         targetDirection.Normalize();
 
         currentDirection = UnityEngine.Vector2.SmoothDamp(currentDirection, targetDirection, ref currentDirectionVelocity, moveSmoothTime);

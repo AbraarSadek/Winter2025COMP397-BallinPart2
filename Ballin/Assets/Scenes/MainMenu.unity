@@ -541,7 +541,7 @@ MonoBehaviour:
   MainMenu1: {fileID: 8300000, guid: fb926ef9a6d462b40a43d19deed1d93c, type: 3}
   MainMenu2: {fileID: 8300000, guid: ffa61608af39e4046af478813d120ce6, type: 3}
   Gameplay: {fileID: 8300000, guid: ace907301eb29f64b8a75867f783f9c7, type: 3}
-  audioMixer: {fileID: 0}
+  audioMixer: {fileID: 24100000, guid: 28100fe52a07403459b30a2fe7b1d489, type: 2}
 --- !u!4 &163173014
 Transform:
   m_ObjectHideFlags: 0

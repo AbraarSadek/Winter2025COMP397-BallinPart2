@@ -20,7 +20,7 @@ public class CoinCollectionController : MonoBehaviour {
 
     //Priavte Variables
     private bool hasStar = false;
-    private int coinsCollected = 0; //Int variable that will hold the number of coins collected by the player
+    public int coinsCollected = 0; //Int variable that will hold the number of coins collected by the player
 
     [SerializeField] private FloatSO score;
     [SerializeField] private FloatSO star;
