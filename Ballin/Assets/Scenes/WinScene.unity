@@ -508,9 +508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c45a4e2ff9eab42933b1b0982db71d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bronzeStar: {fileID: 1543995516}
-  silverStar: {fileID: 2111658779}
-  goldStar: {fileID: 1018256820}
+  starOne: {fileID: 1543995516}
+  starTwo: {fileID: 2111658779}
+  starThree: {fileID: 1018256820}
 --- !u!1 &819153695
 GameObject:
   m_ObjectHideFlags: 0
